@@ -1,0 +1,28 @@
+{
+    "name": "@cloudpremise/react-force-import-demo",
+    "version": "1.0.0",
+    "description": "Reactforce Component Demo",
+    "license": "MIT",
+    "scripts": {
+        "build": "webpack",
+        "start": "webpack-dev-server --open"
+    },
+    "dependencies": {
+        "@cloudpremise/react-force": "^1.0.19",
+        "prop-types": "^15.7.2",
+        "react": "^16.14.0",
+        "react-dom": "^16.14.0"
+    },
+    "devDependencies": {
+        "babel-core": "^6.21.0",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.16.0",
+        "babel-preset-stage-0": "^6.24.1",
+        "html-webpack-plugin": "^3.2.0",
+        "path": "^0.12.7",
+        "webpack": "^4.46.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.2"
+    }
+}

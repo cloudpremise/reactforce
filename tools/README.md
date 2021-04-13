@@ -1,0 +1,1 @@
+this folder contains all of the tools necessary to make react force work.  For example this would be where to install ngrok if not supplied elsewhere

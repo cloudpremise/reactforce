@@ -1,0 +1,45 @@
+<apex:page controller="ReactForceVFCtrl" showHeader="true" sidebar="false" standardStylesheets="false">
+    
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
+    <link rel="shortcut icon" href="./favicon.ico?v=2"></link>
+    <title>Reactforce Visualforce Playground</title>
+    <!-- <link href="{!URLFOR($Resource.reactforceexample5, 'static/css/main.df24737b.chunk.css')}" rel="stylesheet"></link>
+    <link href="{!URLFOR($Resource.reactforceexample5, 'static/css/2.2d6421dd.chunk.css')}" rel="stylesheet"></link> -->
+  </head>
+
+
+
+    <!-- The ReactForceVisualforceController object will be made available in the react code via the global.ReactForceVisualforceController -->
+    <script type="text/javascript">
+        Visualforce.remoting.timeout = 120000;
+
+        ReactForceVisualforceController = {
+          'Visualforce': Visualforce,
+          'createAccount': '{!$RemoteAction.ReactForceVFCtrl.createAccount}',
+          'getAccount': '{!$RemoteAction.ReactForceVFCtrl.getAccount}',
+          'updateAccount': '{!$RemoteAction.ReactForceVFCtrl.updateAccount}',
+          'deleteAccount': '{!$RemoteAction.ReactForceVFCtrl.deleteAccount}',
+        };
+
+    </script>
+    <div id="root"></div>
+
+    <!-- After running the react build and pushing to the server, these lines are for server side hosting 
+    <script type="text/javascript" src="{!URLFOR($Resource.reactforceexample3, 'static/js/main.a675e15d.chunk.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.reactforceexample3, 'static/js/2.376f57dc.chunk.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.reactforceexample3, 'static/js/runtime-main.0e1adff2.js')}"></script> -->
+
+    <!-- These lines are for local development only 
+    <script type="text/javascript" src="https://localhost:3000/static/js/main.chunk.js"></script>
+    <script type="text/javascript" src="https://localhost:3000/static/js/0.chunk.js"></script>
+    <script type="text/javascript" src="https://localhost:3000/static/js/1.chunk.js"></script>
+    <script type="text/javascript" src="https://localhost:3000/static/js/bundle.js"></script> -->
+
+    <!-- These lines are for .ngrok accessible servers running https for local development only -->
+    <script type="text/javascript" src="https://6e1db840c8ba.ngrok.io/static/js/main.chunk.js"></script>
+    <script type="text/javascript" src="https://6e1db840c8ba.ngrok.io/static/js/0.chunk.js"></script>
+    <script type="text/javascript" src="https://6e1db840c8ba.ngrok.io/static/js/1.chunk.js"></script>
+    <script type="text/javascript" src="https://6e1db840c8ba.ngrok.io/static/js/bundle.js"></script> 
+</apex:page>
