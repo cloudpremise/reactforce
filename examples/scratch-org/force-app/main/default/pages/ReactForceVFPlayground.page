@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
     <link rel="shortcut icon" href="./favicon.ico?v=2"></link>
     <title>Reactforce Visualforce Playground</title>
-    <!-- <link href="{!URLFOR($Resource.reactforceexample5, 'static/css/main.df24737b.chunk.css')}" rel="stylesheet"></link>
-    <link href="{!URLFOR($Resource.reactforceexample5, 'static/css/2.2d6421dd.chunk.css')}" rel="stylesheet"></link> -->
+    <!-- <link href="{!URLFOR($Resource.reactforceexample6, 'static/css/main.8c8b27cf.chunk.css')}" rel="stylesheet"></link> -->
+
   </head>
 
 
-
-    <!-- The ReactForceVisualforceController object will be made available in the react code via the global.ReactForceVisualforceController -->
     <script type="text/javascript">
         Visualforce.remoting.timeout = 120000;
 
-        ReactForceVisualforceController = {
+        //This object will be available from within the reactforce apps via the global.ReactForceVisualforceController object
+        var ReactForceVisualforceController = {
           'Visualforce': Visualforce,
           'createAccount': '{!$RemoteAction.ReactForceVFCtrl.createAccount}',
           'getAccount': '{!$RemoteAction.ReactForceVFCtrl.getAccount}',
@@ -24,12 +23,15 @@
         };
 
     </script>
+    ReactForce Visualforce Playground Starts Here
     <div id="root"></div>
+    ReactForce Visualforce Playground Ends Here
 
     <!-- After running the react build and pushing to the server, these lines are for server side hosting 
-    <script type="text/javascript" src="{!URLFOR($Resource.reactforceexample3, 'static/js/main.a675e15d.chunk.js')}"></script>
-    <script type="text/javascript" src="{!URLFOR($Resource.reactforceexample3, 'static/js/2.376f57dc.chunk.js')}"></script>
-    <script type="text/javascript" src="{!URLFOR($Resource.reactforceexample3, 'static/js/runtime-main.0e1adff2.js')}"></script> -->
+    <script type="text/javascript" src="{!URLFOR($Resource.reactforceexample6, 'static/js/main.12f437c6.chunk.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.reactforceexample6, 'static/js/2.b822f9ef.chunk.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.reactforceexample6, 'static/js/3.4292058e.chunk.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.reactforceexample6, 'static/js/runtime-main.4224e1a9.js')}"></script> -->
 
     <!-- These lines are for local development only 
     <script type="text/javascript" src="https://localhost:3000/static/js/main.chunk.js"></script>
@@ -38,8 +40,11 @@
     <script type="text/javascript" src="https://localhost:3000/static/js/bundle.js"></script> -->
 
     <!-- These lines are for .ngrok accessible servers running https for local development only -->
-    <script type="text/javascript" src="https://6e1db840c8ba.ngrok.io/static/js/main.chunk.js"></script>
-    <script type="text/javascript" src="https://6e1db840c8ba.ngrok.io/static/js/0.chunk.js"></script>
-    <script type="text/javascript" src="https://6e1db840c8ba.ngrok.io/static/js/1.chunk.js"></script>
-    <script type="text/javascript" src="https://6e1db840c8ba.ngrok.io/static/js/bundle.js"></script> 
+    <script type="text/javascript" src="https://20b27b2d7b72.ngrok.io/static/js/main.chunk.js"></script>
+    <script type="text/javascript" src="https://20b27b2d7b72.ngrok.io/static/js/0.chunk.js"></script>
+   <script type="text/javascript" src="https://20b27b2d7b72.ngrok.io/static/js/1.chunk.js"></script>
+    <!-- <script type="text/javascript" src="https://20b27b2d7b72.ngrok.io/static/js/vendors~main.chunk.js"></script> -->
+    <script type="text/javascript" src="https://20b27b2d7b72.ngrok.io/static/js/bundle.js"></script>
+
+
 </apex:page>
