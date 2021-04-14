@@ -1,0 +1,49 @@
+{
+  "name": "reactforce-starting-template",
+  "config": {
+    "REACTFORCE_STATICRESOURCE_NAME": "reactforceexample",
+    "REACTFORCE_STATICRESOURCE_META_FULLPATH": "/Users/greg/Dev/repos/sf_customerportal/force-app/main/default/staticresources/reactforceexample.resource-meta.xml",
+    "REACTFORCE_STATICRESOURCE_PATH": "/Users/greg/Dev/repos/sf_customerportal/force-app/main/default/staticresources/",
+    "REACTFORCE_STATICRESOURCE_FULLPATH": "/Users/greg/Dev/repos/sf_customerportal/force-app/main/default/staticresources/reactforceexample/",
+    "REACTFORCE_VISUALFORCE_FULLPATH": "/Users/greg/Dev/repos/sf_customerportal/force-app/main/default/pages/reactforceexample.page",
+    "REACTFORCE_VISUALFORCE_META_FULLPATH": "/Users/greg/Dev/repos/sf_customerportal/force-app/main/default/pages/reactforceexample.page-meta.xml",
+    "REACTFORCE_VISUALFORCE_CONTROLLER_FULLPATH": "/Users/greg/Dev/repos/sf_customerportal/force-app/main/default/classes/ReactForceVFCtrl.cls",
+    "REACTFORCE_VISUALFORCE_CONTROLLER_META_FULLPATH": "/Users/greg/Dev/repos/sf_customerportal/force-app/main/default/classes/ReactForceVFCtrl.cls-meta.xml"
+  },
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "create-staticresource": "mkdir $npm_package_config_REACTFORCE_STATICRESOURCE_FULLPATH && cp ./reactforce/staticresource.resource-meta.xml $npm_package_config_REACTFORCE_STATICRESOURCE_META_FULLPATH",
+    "create-visualforce": "cp ./reactforce/visualforce.page $npm_package_config_REACTFORCE_VISUALFORCE_FULLPATH && cp ./reactforce/visualforce.page-meta.xml $npm_package_config_REACTFORCE_VISUALFORCE_META_FULLPATH",
+    "create-visualforce-controller": "cp ./reactforce/vfconroller.cls $npm_package_config_REACTFORCE_VISUALFORCE_CONTROLLER_FULLPATH && cp ./reactforce/vfcontroller.cls-meta.xml $npm_package_config_REACTFORCE_VISUALFORCE_CONTROLLER_META_FULLPATH",
+    "push": "npm run build && cp -r build $npm_package_config_REACTFORCE_STATICRESOURCE_NAME && rm -R $npm_package_config_REACTFORCE_STATICRESOURCE_FULLPATH && mv $npm_package_config_REACTFORCE_STATICRESOURCE_NAME $npm_package_config_REACTFORCE_STATICRESOURCE_PATH",
+    "init-reactforce": "npm install && npm run create-staticresource && npm run create-visualforce"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
